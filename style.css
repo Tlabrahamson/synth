@@ -1,0 +1,143 @@
+:root {
+  --container-padding: 0rem 6rem;
+  --main-transition: all 0.2s ease-in-out;
+  --text-spacer: 2rem 0rem;
+  --darkest: #0d0221;
+  --lightest: #f4d676;
+  --cyan: #36cdc4;
+  --purple: #5c2686;
+  --pink: #ff1690;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--darkest);
+}
+
+header {
+  padding: 2rem 6rem;
+  position: absolute;
+  width: 100%;
+}
+
+header h1 {
+  color: var(--lightest);
+  font-family: "Knewave", cursive;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-bars {
+  color: var(--lightest);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.page-container {
+  padding: var(--container-padding);
+  font-family: "Slabo 27px", serif;
+}
+
+.page-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  color: #fff;
+}
+
+.section-text-content {
+  width: 100%;
+  background: var(--darkest);
+  padding: 2rem 3rem;
+  position: relative;
+}
+
+.section-text-content h2 {
+  font-size: 4rem;
+  line-height: 4rem;
+  color: var(--pink);
+  margin: var(--text-spacer);
+}
+
+.section-text-content p {
+  font-size: 1.3rem;
+  color: var(--lightest);
+  margin: var(--text-spacer);
+}
+
+.section-text-content button {
+  background: var(--darkest);
+  margin: 1rem 0rem;
+  color: var(--cyan);
+  outline: none;
+  border: solid 2px var(--cyan);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.section-text-content button:hover {
+  background: var(--cyan);
+  border: solid 2px var(--darkest);
+  color: var(--darkest);
+}
+
+.page-section img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 2rem;
+}
+
+/* MOBILE ------------------------------------------- */
+@media screen and (max-width: 1260px) {
+  header {
+    padding: 1rem 1rem;
+    top: 0;
+  }
+
+  .page-container {
+    padding: 1rem 1rem;
+    margin-top: 4rem;
+  }
+
+  .page-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 4rem 0rem;
+  }
+
+  .section-text-content {
+    width: 100%;
+    border: none;
+    padding: 1rem 0rem;
+  }
+
+  .section-text-content h2 {
+    font-size: 3rem;
+  }
+
+  .section-text-content p {
+    font-size: 1.2rem;
+  }
+
+  .page-section img {
+    margin: 0;
+    max-width: 100%;
+  }
+}
