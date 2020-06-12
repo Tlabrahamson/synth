@@ -19,6 +19,16 @@ body {
   background: var(--darkest);
 }
 
+body.hide {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   padding: 2rem 6rem;
   position: absolute;
@@ -29,6 +39,7 @@ header {
 header h1 {
   color: var(--lightest);
   font-family: "Knewave", cursive;
+  font-size: 2rem;
 }
 
 nav {
@@ -42,15 +53,125 @@ nav {
   outline: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: var(--main-transition);
 }
 
-.fa-bars {
+.line-1 {
+  background: var(--lightest);
+  width: 30px;
+  height: 6px;
+}
+
+.line-2 {
+  margin-top: 4px;
+  background: var(--lightest);
+  width: 18px;
+  height: 4px;
+  animation-name: move;
+}
+
+.line-3 {
+  margin-top: 4px;
+  background: var(--lightest);
+  width: 12px;
+  height: 2px;
+}
+
+.hamburger:hover .line-2 {
+  animation-name: move;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+.hamburger:hover .line-3 {
+  animation-name: move-two;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes move {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  25% {
+    margin: 4px 4px 0 0;
+  }
+  50% {
+    margin: 4px 0 0 0;
+  }
+  75% {
+    margin: 4px 0 0 4px;
+  }
+  100% {
+    margin: 4px 0 0 0;
+  }
+}
+
+@keyframes move-two {
+  0% {
+    margin: 4px 0 0 0;
+  }
+  25% {
+    margin: 4px 0 0 4px;
+  }
+  50% {
+    margin: 4px 0 0 0;
+  }
+  75% {
+    margin: 4px 4px 0 0;
+  }
+  100% {
+    margin: 4px 0 0 0;
+  }
+}
+
+video {
+  width: 100%;
+}
+
+.hidden-menu {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
   color: var(--lightest);
-  font-size: 1.5rem;
-  pointer-events: none;
+  background: var(--darkest);
+  clip-path: inset(0 0 100% 0);
+  transition: all 0.4s ease-in-out;
+  padding: 8rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.25;
+}
+
+.hidden-menu ul {
+  list-style: none;
+}
+
+.hidden-menu ul li {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+}
+
+.hidden-menu h2 {
+  font-size: 4rem;
+}
+
+.hidden-menu.active {
+  height: 100vh;
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
 }
 
 .page-container {
+  overflow: hidden;
   padding: var(--container-padding);
   font-family: "Slabo 27px", serif;
 }
