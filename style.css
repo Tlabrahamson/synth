@@ -133,6 +133,18 @@ video {
   width: 100%;
 }
 
+.hidden-menu:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(var(--darkest), var(--cyan));
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+
 .hidden-menu {
   margin: 0;
   position: absolute;
@@ -153,6 +165,8 @@ video {
 
 .hidden-menu ul {
   list-style: none;
+  z-index: 5;
+  color: var(--lightest);
 }
 
 .hidden-menu ul li {
@@ -168,6 +182,16 @@ video {
   height: 100vh;
   opacity: 1;
   clip-path: inset(0 0 0 0);
+}
+
+.menu-vid {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
 }
 
 .page-container {
