@@ -285,6 +285,39 @@ video {
   left: 0;
 }
 
+.form-section {
+  color: var(--lightest);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h3 {
+  color: var(--pink);
+  font-size: 3rem;
+}
+
+.form-section p {
+  font-size: 2rem;
+  margin: var(--text-spacer);
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+#email,
+#message {
+  display: block;
+  font-size: 1.3rem;
+  font-family: "Slabo 27px", serif;
+  border: ridge 2px var(--cyan);
+  background: none;
+  color: var(--lightest);
+  padding: 0.4rem;
+}
+
 footer {
   padding: 2rem 0rem;
   color: var(--lightest);
