@@ -40,6 +40,11 @@ header h1 {
   color: var(--lightest);
   font-family: "Knewave", cursive;
   font-size: 2rem;
+  transition: var(--main-transition);
+}
+
+header h1:hover {
+  color: var(--pink);
 }
 
 nav {
@@ -64,6 +69,7 @@ nav {
   background: var(--lightest);
   width: 30px;
   height: 6px;
+  transition: var(--main-transition);
 }
 
 .line-2 {
@@ -72,6 +78,7 @@ nav {
   width: 18px;
   height: 4px;
   animation-name: move;
+  transition: var(--main-transition);
 }
 
 .line-3 {
@@ -79,18 +86,25 @@ nav {
   background: var(--lightest);
   width: 12px;
   height: 2px;
+  transition: var(--main-transition);
+}
+
+.hamburger:hover .line-1 {
+  background: var(--pink);
 }
 
 .hamburger:hover .line-2 {
   animation-name: move;
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  background: var(--pink);
 }
 
 .hamburger:hover .line-3 {
   animation-name: move-two;
   animation-iteration-count: infinite;
   animation-duration: 2s;
+  background: var(--pink);
 }
 
 @keyframes move {
@@ -133,6 +147,16 @@ video {
   width: 100%;
 }
 
+.hidden-menu img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  mix-blend-mode: overlay;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .hidden-menu:before {
   content: "";
   position: absolute;
@@ -141,7 +165,6 @@ video {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-image: linear-gradient(var(--darkest), var(--purple));
 }
 
 .hidden-menu {
@@ -262,6 +285,11 @@ video {
   left: 0;
 }
 
+footer {
+  padding: 2rem 0rem;
+  color: var(--lightest);
+}
+
 /* MOBILE ------------------------------------------- */
 @media screen and (max-width: 1260px) {
   header {
@@ -301,5 +329,9 @@ video {
   .page-section img {
     margin: 0;
     max-width: 100%;
+  }
+
+  footer {
+    padding: 1rem 0rem;
   }
 }
