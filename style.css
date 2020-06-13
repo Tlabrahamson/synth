@@ -220,12 +220,19 @@ video {
 
 .page-section {
   background: var(--darkest);
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   line-height: 2rem;
   color: #fff;
+  position: relative;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  height: 100vh;
 }
 
 .section-text-content {
@@ -287,9 +294,55 @@ form button:hover {
   left: 0;
 }
 
+.cyber-zoo-container {
+  height: 100vh;
+  margin-top: 3rem;
+}
+
+.cyber-zoo-container h3 {
+  color: var(--pink);
+  font-size: 3rem;
+}
+
+.cyber-zoo-container p {
+  color: var(--lightest);
+  font-size: 2rem;
+  margin: var(--text-spacer);
+}
+
+.grid-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+  margin-left: -1rem;
+  margin-right: 1rem;
+}
+
+.grid-section h3 {
+  font-size: 2rem;
+}
+
+.grid-section img {
+  width: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  object-position: top;
+  object-fit: cover;
+}
+
+.grid-section p {
+  font-size: 1.3rem;
+}
+
 .form-section {
   color: var(--lightest);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -322,12 +375,14 @@ label {
 }
 
 footer {
+  margin-top: 4rem;
   padding: 2rem 0rem;
   color: var(--lightest);
 }
 
-/* MOBILE ------------------------------------------- */
-@media screen and (max-width: 1260px) {
+/* Tablet ------------------------------------------- */
+
+@media screen and (max-width: 1178px) {
   header {
     padding: 1rem 1rem;
     top: 0;
@@ -346,6 +401,11 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 4rem 0rem;
+    height: 100%;
+  }
+
+  .page-section img {
+    max-height: 400px;
   }
 
   .section-text-content {
@@ -367,7 +427,34 @@ footer {
     max-width: 100%;
   }
 
+  .cyber-zoo-container {
+    height: 100%;
+    margin-bottom: 6rem;
+  }
+
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   footer {
     padding: 1rem 0rem;
+  }
+}
+
+/* Mobile ------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .page-section img {
+    max-height: 300px;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-section div {
+    padding: 1rem 0;
+    margin: 0;
   }
 }

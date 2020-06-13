@@ -49,7 +49,7 @@ function animateSections() {
     // Create the page scene
     pageScene = new ScrollMagic.Scene({
       triggerElement: section,
-      duration: "100%",
+      duration: "200%",
       triggerHook: 0
     })
       .setTween(pageTimeline)
