@@ -248,7 +248,8 @@ video {
   margin: var(--text-spacer);
 }
 
-.section-text-content button {
+.section-text-content button,
+form button {
   background: var(--darkest);
   margin: 1rem 0rem;
   color: var(--cyan);
@@ -261,7 +262,8 @@ video {
   transition: var(--main-transition);
 }
 
-.section-text-content button:hover {
+.section-text-content button:hover,
+form button:hover {
   background: var(--cyan);
   border: solid 2px var(--darkest);
   color: var(--darkest);
@@ -307,6 +309,7 @@ label {
   font-size: 1.3rem;
 }
 
+#name,
 #email,
 #message {
   display: block;
