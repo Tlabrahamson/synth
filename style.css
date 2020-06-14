@@ -207,6 +207,15 @@ video {
   font-size: 4rem;
 }
 
+.hidden-menu span {
+  color: var(--cyan);
+}
+
+.hidden-menu p {
+  font-size: 2rem;
+  margin-top: var(--text-spacer);
+}
+
 .hidden-menu.active {
   height: 100vh;
   clip-path: inset(0 0 0 0);
@@ -311,11 +320,14 @@ form button:hover {
 }
 
 .grid-section {
+  height: 75%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .grid-section div {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -331,10 +343,11 @@ form button:hover {
 
 .grid-section img {
   width: 100%;
-  max-width: 300px;
-  max-height: 200px;
+  max-width: 400px;
+  max-height: 300px;
   object-position: top;
   object-fit: cover;
+  margin-top: 2rem;
 }
 
 .grid-section p {
@@ -382,7 +395,7 @@ footer {
 
 /* Tablet ------------------------------------------- */
 
-@media screen and (max-width: 1178px) {
+@media screen and (max-width: 1200px) {
   header {
     padding: 1rem 1rem;
     top: 0;
@@ -454,7 +467,7 @@ footer {
   }
 
   .grid-section div {
-    padding: 1rem 0;
+    padding: 1rem 0rem;
     margin: 0;
   }
 }

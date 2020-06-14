@@ -18,12 +18,13 @@ function animateSections() {
   // Initiate controller
   controller = new ScrollMagic.Controller();
   // Select the sections
-  const sliders = document.querySelectorAll(".page-section");
+  const sections = document.querySelectorAll("section");
 
   // Loop over each of the sections
-  sliders.forEach((section, index, sections) => {
-    const image = section.querySelector("img");
+  sections.forEach((section, index, sections) => {
+    const image = section.querySelectorAll("img");
     const reveal = section.querySelector(".text-reveal");
+    const form = section.querySelector("form");
 
     // GSAP
     const sectionTimeline = gsap.timeline({
@@ -33,6 +34,7 @@ function animateSections() {
     sectionTimeline.fromTo(image, { x: "-120%" }, { x: "0%" });
     sectionTimeline.fromTo(image, { opacity: 0 }, { opacity: "1" }, "-=0.75");
     sectionTimeline.fromTo(reveal, { left: "0%" }, { left: "120%" }, "-=0.75");
+    sectionTimeline.fromTo(form, { opacity: 0 }, { opacity: "1" }, "-=1.5");
 
     // Create a scene
     sectionScene = new ScrollMagic.Scene({
