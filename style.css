@@ -414,6 +414,22 @@ footer {
     padding: 1rem 1rem;
   }
 
+  .hidden-menu ul li {
+    font-size: 1.5rem;
+  }
+
+  .hidden-menu h2 {
+    font-size: 3rem;
+  }
+
+  .hidden-menu span {
+    color: var(--cyan);
+  }
+
+  .hidden-menu p {
+    font-size: 1.5rem;
+  }
+
   .page-section {
     flex-direction: column;
     justify-content: space-evenly;
@@ -462,6 +478,22 @@ footer {
 /* Mobile ------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
+  .hidden-menu ul li {
+    font-size: 1.25rem;
+  }
+
+  .hidden-menu h2 {
+    font-size: 2rem;
+  }
+
+  .hidden-menu span {
+    color: var(--cyan);
+  }
+
+  .hidden-menu p {
+    font-size: 1.25rem;
+  }
+
   .page-section img {
     max-height: 300px;
   }
