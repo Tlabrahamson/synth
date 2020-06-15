@@ -393,6 +393,10 @@ footer {
   color: var(--lightest);
 }
 
+.menu-span {
+  color: var(--pink) !important;
+}
+
 /* Tablet ------------------------------------------- */
 
 @media screen and (max-width: 1200px) {
