@@ -305,7 +305,6 @@ form button:hover {
 
 .cyber-zoo-container {
   height: 100vh;
-  margin-top: 3rem;
 }
 
 .cyber-zoo-container h3 {
@@ -335,6 +334,7 @@ form button:hover {
   padding: 1rem 1rem;
   margin-left: -1rem;
   margin-right: 1rem;
+  width: 100%;
 }
 
 .grid-section h3 {
@@ -359,6 +359,7 @@ form button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 }
 
 .form-section h3 {
@@ -372,7 +373,13 @@ form button:hover {
 }
 
 label {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 350px;
 }
 
 #name,
@@ -391,10 +398,15 @@ footer {
   margin-top: 4rem;
   padding: 2rem 0rem;
   color: var(--lightest);
+  font-size: 1.2rem;
 }
 
 .menu-span {
   color: var(--pink) !important;
+}
+
+.section-three {
+  margin-bottom: 4rem;
 }
 
 /* Tablet ------------------------------------------- */
@@ -433,12 +445,12 @@ footer {
   .page-section {
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 4rem 0rem;
+    margin: 8rem 0rem;
     height: 100%;
   }
 
-  .page-section img {
-    max-height: 400px;
+  .section-three {
+    margin-bottom: 16rem;
   }
 
   .section-text-content {
@@ -456,6 +468,7 @@ footer {
   }
 
   .page-section img {
+    max-height: 400px;
     margin: 0;
     max-width: 100%;
   }
@@ -465,13 +478,39 @@ footer {
     margin-bottom: 6rem;
   }
 
+  .cyber-zoo-container h3 {
+    color: var(--pink);
+    font-size: 3rem;
+  }
+
+  .cyber-zoo-container p {
+    font-size: 1.5rem;
+  }
+
   .grid-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
+  .grid-section h3 {
+    font-size: 2rem;
+  }
+
+  .grid-section p {
+    font-size: 1.2rem;
+  }
+
+  .form-section p {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 1.25rem;
+  }
+
   footer {
     padding: 1rem 0rem;
+    font-size: 1rem;
   }
 }
 
@@ -498,6 +537,31 @@ footer {
     max-height: 300px;
   }
 
+  .section-text-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .section-text-content p {
+    font-size: 1.25rem;
+  }
+
+  .cyber-zoo-container h3 {
+    color: var(--pink);
+    font-size: 2.5rem;
+  }
+
+  .cyber-zoo-container p {
+    font-size: 1.5rem;
+  }
+
+  .grid-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .grid-section p {
+    font-size: 1.25rem;
+  }
+
   .grid-section {
     grid-template-columns: 1fr;
   }
@@ -505,5 +569,18 @@ footer {
   .grid-section div {
     padding: 1rem 0rem;
     margin: 0;
+  }
+
+  .form-section h3 {
+    font-size: 2.5rem;
+  }
+
+  .form-section p {
+    font-size: 1.25rem;
+  }
+
+  footer {
+    padding: 0;
+    text-align: center;
   }
 }
