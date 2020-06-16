@@ -304,7 +304,7 @@ form button:hover {
 }
 
 .cyber-zoo-container {
-  height: 100vh;
+  height: 100%;
 }
 
 .cyber-zoo-container h3 {
@@ -315,7 +315,7 @@ form button:hover {
 .cyber-zoo-container p {
   color: var(--lightest);
   font-size: 2rem;
-  margin: var(--text-spacer);
+  margin-top: 2rem;
 }
 
 .grid-section {
@@ -369,6 +369,7 @@ form button:hover {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  padding-top: 16rem;
 }
 
 .form-section h3 {
@@ -562,6 +563,10 @@ footer span {
     font-size: 1.25rem;
   }
 
+  .cyber-zoo-container {
+    margin-bottom: 6rem;
+  }
+
   .cyber-zoo-container h3 {
     color: var(--pink);
     font-size: 2.5rem;
@@ -586,6 +591,10 @@ footer span {
   .grid-section div {
     padding: 1rem 0rem;
     margin: 0;
+  }
+
+  .form-section {
+    padding-top: 0;
   }
 
   .form-section h3 {
