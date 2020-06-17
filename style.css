@@ -409,7 +409,7 @@ textarea {
 }
 
 footer {
-  margin-top: 4rem;
+  margin-top: 18rem;
   padding: 2rem 0rem;
   color: var(--lightest);
   font-size: 1.2rem;
@@ -628,6 +628,7 @@ footer span {
   footer {
     padding: 0;
     text-align: center;
+    margin-top: 6rem;
   }
 
   footer span {
